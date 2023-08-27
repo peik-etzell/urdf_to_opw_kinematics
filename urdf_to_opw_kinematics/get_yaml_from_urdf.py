@@ -9,7 +9,7 @@ import yaml
 from urdf_parser_py.urdf import URDF  # nolint
 from urdf_to_opw_kinematics.main import convert, check_compatibility
 
-#PATTERN = "*_macro.xacro"
+# PATTERN = "*_macro.xacro"
 PATTERN = "*.urdf"
 
 
@@ -106,5 +106,9 @@ class RobotParser:
             yaml.dump(data, outfile)  # , default_flow_style=False)
 
 
-if __name__ == "__main__":
+def main():
     parser = RobotParser(sys.argv)
+
+
+if __name__ == "__main__":
+    main()
